@@ -1,0 +1,2 @@
+def alquilar():
+    pass
