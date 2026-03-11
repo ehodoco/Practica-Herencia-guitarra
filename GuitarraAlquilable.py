@@ -22,12 +22,14 @@ class GuitarraAlquilable(Guitarra):
         fecha_devolucion = self.fecha_alquilada + timedelta(days=dias)
         return (round(cuota, 2), fecha_devolucion)
     
+
     def cuota_diaria(self, dias) -> float:
         return (self.precio_base*self.impuesto_marca[self.marca]/dias)/4
 
 
 if __name__ == "__main__":
 
-    bcrich1 = GuitarraAlquilable(6, datetime(1999, 1, 1), 250, "BCRich", "Platinum Series", "Warlock")
+    bcrich1 = GuitarraAlquilable(6, datetime(1999, 1, 1), 250, "HarleyBenton", "Platinum Series", "Warlock")
     
     print(bcrich1.alquilar(184))
+

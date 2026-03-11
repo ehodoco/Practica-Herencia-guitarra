@@ -3,6 +3,7 @@ from Guitarra import Guitarra
 
 class GuitarraVendible(Guitarra):
    
+
     def __init__(self, n_cuerdas:int, fecha_creacion: datetime, precio_base: float, marca: str, modelo: str, forma: str, dias_garantia: int, fecha_venta: datetime = None):
         super().__init__(n_cuerdas, fecha_creacion, precio_base, marca, modelo, forma)
         self.fecha_venta = fecha_venta
@@ -29,4 +30,6 @@ if __name__ == "__main__":
 
     bcrich1 = GuitarraVendible(6, datetime(1999, 1, 1), 250, "BCRich", "Platinum Series", "Warlock", 184)
     
-    print(bcrich1.vender())
+    print(bcrich1.precio_venta())
+    print(bcrich1.vender().strftime("%x"))
+
